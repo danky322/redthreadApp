@@ -4,7 +4,7 @@ import '../CSS/movieList.css';
 import Header from './Header';
 import MovieDetails from './MovieDetails';
 
-if (process.env.NODE_ENV !== 'test') Modal.setAppElement('#app');
+if (process.env.NODE_ENV !== 'test') Modal.setAppElement('#root');
 
 const modalStyle = {
 	content: {
@@ -53,7 +53,7 @@ const MovieList = () => {
 						className='movieBorder'
 						onClick={e => openModalFunc(e, item)}>
 						<img
-							data-testid='imgId'
+							data-testid={`imgId-${item.index}`}
 							src={`https://image.tmdb.org/t/p/w185${item.poster_path}`}
 							alt={item.title}
 						/>
