@@ -7,7 +7,7 @@ const setOpenModal = () => {
 	jest.fn().mockRejectedValue(false);
 };
 describe('Movie Detail component tests', () => {
-	test('starts without anything', async () => {
+	test('starts without anything on it', async () => {
 		render(<MovieDetails id={616037} setOpenModal={setOpenModal} />);
 		const id = screen.queryByTestId('movie-616037');
 
