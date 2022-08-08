@@ -1,0 +1,58 @@
+.movieList {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.movieBorder {
+	cursor: pointer;
+	height: 278px;
+}
+
+.movieBorder img:active {
+	transform: scale(0.98);
+	box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+/* modal transition  */
+
+.ReactModal__Overlay {
+	opacity: 0;
+	transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+	opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+	opacity: 0;
+}
+
+/* inner scroll styling */
+.modal {
+	scrollbar-width: thin;
+	scrollbar-color: #6969dd #e0e0e0;
+}
+
+.modal::-webkit-scrollbar {
+	width: 5px;
+}
+
+.modal::-webkit-scrollbar-track {
+	background-color: rgb(128, 35, 220);
+}
+
+.modal::-webkit-scrollbar-thumb {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* 
+for bigger screens add hover effects */
+@media only screen and (min-width: 375px) {
+	.movieBorder img:hover {
+		transition-duration: 0.3s;
+		transform: scale(1.05);
+	}
+}
