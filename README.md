@@ -6,20 +6,25 @@ Hey! This is my test application!
 
 I'll list the features I have implemented for this test here.
 
+THIS IS A WEB APPLICATIONS BUT I HAVE CATERED THE AESTHETIC TO THE MOBILE RESOLUTION OF THE FIGMA DESIGNS
+
+IT IS STILL RESPONSIVE TO DESKTOP SCREENS
+
 1. Responsive design
 2. CSS transitions and hover effects
 3. API CALLS
 4. Rendering meta data
-5. modal opacity transition
+5. Modal opacity transition
+6. Unit tests
 
 ### `TO SEE MY CODE`
 All my code is in the src folder!
 
 ### `LIVE VERISON OF THE SITE`
-https://keen-medovik-8351e7.netlify.app/
+https://dainty-meerkat-e91484.netlify.app/
 
 ### `GITHUB Repo for the actual code`
-https://github.com/danky322/coalitiontest
+https://github.com/danky322/redthreadApp/
 
 ### `GITHUB Repo for my other projects`
 https://github.com/danjhkim/
