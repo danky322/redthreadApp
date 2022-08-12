@@ -33,14 +33,21 @@ const MovieList = () => {
 	}
 
 	useEffect(() => {
+		const myAbortController = new AbortController();
+
 		(async () => {
 			let response = await fetch(
 				`${process.env.REACT_APP_URL}3/movie/popular?api_key=${process.env.REACT_APP_APIKEY}`,
+				{ signal: myAbortController.signal },
 			);
 			let list = await response.json();
 
 			setMovieList(list.results);
 		})();
+
+		return () => {
+			myAbortController.abort();
+		};
 	}, []);
 
 	const renderList = () => {

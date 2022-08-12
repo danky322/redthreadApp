@@ -8,14 +8,21 @@ const MovieDetails = ({ id, setOpenModal }) => {
 	const [movie, setMovie] = useState(false);
 
 	useEffect(() => {
+		const myAbortController = new AbortController();
+
 		(async () => {
 			let response = await fetch(
 				`${process.env.REACT_APP_URL}3/movie/${id}?api_key=${process.env.REACT_APP_APIKEY}`,
+				{ signal: myAbortController.signal },
 			);
 			let list = await response.json();
 
 			setMovie(list);
 		})();
+
+		return () => {
+			myAbortController.abort();
+		};
 	}, [id]);
 
 	const renderYear = () => {
